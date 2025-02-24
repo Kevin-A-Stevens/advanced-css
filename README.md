@@ -65,3 +65,11 @@ Unfortunately, this is quite common. I listed some possible fixes [in this docum
 ### Q13: Do you accept pull requests?
 
 **A:** No, for the simple reason that I want this repository to contain the _exact_ same code that is shown in the videos. However, please feel free to add an issue if you found one.
+
+### Q14: How do you install Sass?
+
+**A:** Check if you have node installed via the command line with "node -v". Create a package.json file by typing "npm init". Answer the questions. Finally install sass with "npm install node-sass --save-dev".
+
+### Q14: How do you compile Saas?
+
+**A:** First create a sass folder "mkdir sass". Create a file in this folder "touch main.scss". In package.json file under scripts: write "compile:sass": "node-sass sass/main.scss css/style.css -w" including the quotes and save the file. In terminal type "npm run compile:sass" without the quotes.
