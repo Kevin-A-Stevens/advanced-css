@@ -1,0 +1,13 @@
+.section__about-pictures {
+    grid-column: 2 / 3; /* Pictures in the second column */
+    grid-row: 2 / 3;
+    padding: 1rem;
+    background-color: green;
+}
+
+.section__about-content {
+    grid-column: 3 / 4; /* Content in the third column */
+    grid-row: 2 / 3;
+    padding: 1rem;
+    background-color: teal;
+}

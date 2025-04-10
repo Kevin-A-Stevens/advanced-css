@@ -1,0 +1,91 @@
+// COLOR VARIABLES
+$color-primary: #1a3263;
+$color-secondary: #fab95b;
+$color-primary-light: #485b82;
+$color-secondary-light: #fbc77c;
+$color-primary-dark: #15284f;
+$color-secondary-dark: #c89449;
+
+$color-gray-light-1: #e8e2db;
+$color-gray-light-2: #d1cbc5;
+$color-gray-dark-1: #464442;
+$color-gray-dark-2: #2e2d2c;
+
+$color-transparent: rgba(255, 255, 255, 0.2);
+$color-border: rgba(209, 213, 219, 0.3);
+
+// FONT VARIABLES
+$font-primary: "Rubik", sans-serif;
+
+// RESPONSIVE BREAKPOINTS
+$bp-largest: 75em;  // 1200px / 16 = 75
+$bp-large: 62.5em; // 1000 / 16 = 62.5
+$bp-medium: 50em; // 800 / 16 = 50
+$bp-small:  37.5em; // 600 / 16 = 37.5
+
+
+// GLOBAL RESET
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // 10px / 16px = 62.5% -> 1rem = 10px
+
+    @media only screen and (max-width: $bp-largest) {
+        font-size: 50%;
+    }
+}
+
+body {
+    font-family: $font-primary;
+    color: $color-gray-dark-1;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+// Grid container
+
+.container {
+    display: grid;
+    grid-template-columns: minmax(12rem, 15rem) 1fr; /* Flexible nav and columns - 2 columns */
+    grid-template-rows: auto repeat(5, auto) auto; /* Flexible rows - 7 rows */
+    // gap: 1rem; /* Adds spacing between items */
+    height: 100vh; /* Ensures full viewport height */
+
+    /* Responsive Adjustments */
+    @media (max-width: 800px) {
+        .container {
+            grid-template-columns: 1fr; /* Single column layout */
+            grid-template-rows: auto; /* Rows adjust dynamically */
+        }
+    
+        .nav {
+            grid-column: 1 / 2;
+            grid-row: 1 / 2; /* Moves nav to the top */
+        }
+    
+        .section__header, 
+        .section__about-pictures, 
+        .section__about-content, 
+        .section__contact, 
+        .section__footer {
+            grid-column: 1 / 2; /* All sections span full width */
+        }
+  }
+
+    // @media only screen and (max-width: $bp-large) {
+    //     grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content);
+    //     grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+    // }
+
+    // @media only screen and (max-width: $bp-medium) {
+    //     grid-template-rows: 6rem calc(100vh - 6rem);
+    // }
+}

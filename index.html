@@ -5,10 +5,216 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css">
     <title>Kevin Stevens Portfolio</title>
 </head>
 
-<body>
+<body class="container">
+
+    <!-- Nav section -->
+    <nav id="home" class="section__nav">
+        <ul class="side-nav sticky">
+            <li class="side-nav__item side-nav__item--active">
+                <a href="#home" class="side-nav__link">
+                    <!-- <svg class="side-nav__icon">
+                    <use xlink:href="img/sprite.svg#icon-home" />
+                  </svg> -->
+                    <span>Home</span>
+                </a>
+            </li>
+
+            <li class="side-nav__item">
+                <a href="#" class="side-nav__link">
+                    <!-- <svg class="side-nav__icon">
+                    <use xlink:href="img/sprite.svg#icon-user" />
+                  </svg> -->
+                    <span>About me</span>
+                </a>
+            </li>
+
+            <li class="side-nav__item">
+                <a href="#" class="side-nav__link">
+                    <!-- <svg class="side-nav__icon">
+                    <use xlink:href="img/sprite.svg#icon-text-document-inverted" />
+                  </svg> -->
+                    <span>Skills</span>
+                </a>
+            </li>
+
+            <li class="side-nav__item">
+                <a href="#" class="side-nav__link">
+                    <!-- <svg class="side-nav__icon">
+                    <use xlink:href="img/sprite.svg#icon-laptop" />
+                  </svg> -->
+                    <span>My work</span>
+                </a>
+            </li>
+
+            <li class="side-nav__item">
+                <a href="#" class="side-nav__link">
+                    <!-- <svg class="side-nav__icon">
+                    <use xlink:href="img/sprite.svg#icon-google-hangouts" />
+                  </svg> -->
+                    <span>Testimonials</span>
+                </a>
+            </li>
+
+            <li class="side-nav__item">
+                <a href="#" class="side-nav__link">
+                    <!-- <svg class="side-nav__icon">
+                    <use xlink:href="img/sprite.svg#icon-mail" />
+                  </svg> -->
+                    <span>Contact me</span>
+                </a>
+            </li>
+
+            <li class="side-nav__item">
+                <a href="#" class="side-nav__link">
+                    <!-- <svg class="side-nav__icon">
+                    <use xlink:href="img/sprite.svg#icon-mail" />
+                  </svg> -->
+                    <span>Resume</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Header section -->
+    <header class="section__header">
+        <div class="header-main">
+            <h1 class="heading-1">Welcome to my page.</h1>
+            <br />
+            <h1 class="heading-1">My name is Kevin.</h1>
+            <h3 class="heading-4">I am a Web Developer living in Nashville.</h3>
+        </div>
+        <div class="header-links">
+            <h4 class="heading-3">You can also find me on</h4>
+
+            <ul class="social__links">
+                <li class="social__item">
+                    <a href="#" class="social__link">
+                        <svg class="link__icon">
+                            <use xlink:href="img/sprite.svg#icon-linkedin-with-circle" />
+                        </svg>
+                        <!-- <span>LinkedIn</span> -->
+                    </a>
+                </li>
+
+                <li class="social__item">
+                    <a href="#" class="social__link">
+                        <svg class="link__icon">
+                            <use xlink:href="img/sprite.svg#icon-facebook" />
+                        </svg>
+                        <!-- <span>Facebook</span> -->
+                    </a>
+                </li>
+
+                <li class="social__item">
+                    <a href="#" class="social__link">
+                        <svg class="link__icon">
+                            <use xlink:href="img/sprite.svg#icon-mail" />
+                        </svg>
+                        <!-- <span>Email</span> -->
+                    </a>
+                </li>
+
+                <li class="social__item">
+                    <a href="#" class="social__link">
+                        <svg class="link__icon">
+                            <use xlink:href="img/sprite.svg#icon-message" />
+                        </svg>
+                        <!-- <span>My Blog</span> -->
+                    </a>
+                </li>
+            </ul>
+            <div class="text__icons">
+                <!-- TODO: Update CSS to look like Footer elements -->
+                <span class="text_icon">LinkedIn</span>
+                <span class="text_icon">Facebook</span>
+                <span class="text_icon">Email</span>
+                <span class="text_icon">My Blog</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- About pictures section -->
+    <section class="section__about-pictures">
+        <img src="img/photo1.jpg" alt="Photo of Kevin" class="story__photo--1" />
+        <img src="img/photo2.jpg" alt="Photo of Kevin" class="story__photo--2" />
+    </section>
+    <section class="section__about-content">
+        <h3 class="heading-2">About me</h3>
+        <p class="story__text">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur
+            distinctio necessitatibus pariatur voluptatibus. Quidem consequatur
+            harum volupta!
+        </p>
+    </section>
+
+    <!-- Skills section -->
+    <section id="skills" class="section__skills">
+        <h1>Complete skills section</h1>
+    </section>
+
+    <!-- My work section -->
+    <section class="section__my-work">
+        <h1>Complete my work section</h1>
+    </section>
+
+    <!-- Contact section -->
+    <section class="section__contact">
+        <div class="row">
+            <div class="contact">
+                <div class="contact__form">
+                    <form action="#" class="form" id="userform">
+                        <div class="h2-heading">
+                            <h2 class="contact-header">Contact me</h2>
+                        </div>
+                        <div class="form__group">
+                            <input type="text" class="form__input" placeholder="Full Name" id="name" required />
+                            <label for="name" class="form__label">Full name</label>
+                        </div>
+
+                        <div class="form__group">
+                            <input type="email" class="form__input" placeholder="Email address" id="email" required />
+                            <label for="email" class="form__label">Email address</label>
+                        </div>
+                        <div class="form__group">
+                            <textarea name="comment" form="userform" id="comment" cols="30" rows="10"
+                                class="form__label form__input text-box"></textarea>
+                            <label for="comment" class="form__label text-box"></label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer section -->
+    <footer class="section__footer">
+        <ul class="footer-nav">
+            <li class="footer-nav__item">
+                <a href="#" class="footer-nav__link">LinkedIn</a>
+            </li>
+            <li class="footer-nav__item">
+                <a href="#" class="footer-nav__link">Facebook</a>
+            </li>
+            <li class="footer-nav__item">
+                <a href="#" class="footer-nav__link">Contact Me</a>
+            </li>
+            <li class="footer-nav__item">
+                <a href="#" class="footer-nav__link">My Blog</a>
+            </li>
+        </ul>
+        <p class="copyright">&copy; Copyright 2017 by Kevin Stevens</p>
+    </footer>
+
+    <script src="./script/script.js"></script>
 
 </body>
 

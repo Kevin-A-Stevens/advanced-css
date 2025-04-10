@@ -1,0 +1,106 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  color: #464442;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: minmax(12rem, 15rem) 1fr; /* Flexible nav and columns - 2 columns */
+  grid-template-rows: auto repeat(5, auto) auto; /* Flexible rows - 7 rows */
+  height: 100vh; /* Ensures full viewport height */
+  /* Responsive Adjustments */
+}
+@media (max-width: 800px) {
+  .container .container {
+    grid-template-columns: 1fr; /* Single column layout */
+    grid-template-rows: auto; /* Rows adjust dynamically */
+  }
+  .container .nav {
+    grid-column: 1/2;
+    grid-row: 1/2; /* Moves nav to the top */
+  }
+  .container .section__header,
+  .container .section__about-pictures,
+  .container .section__about-content,
+  .container .section__contact,
+  .container .section__footer {
+    grid-column: 1/2; /* All sections span full width */
+  }
+}
+
+.section__nav {
+  grid-column: 1/2; /* Sidebar on the left */
+  grid-row: 1/7; /* Stretches down to the footer */
+  background-color: red;
+}
+
+.section__header {
+  grid-column: 2/4; /* Spans the second and third columns */
+  grid-row: 1/2;
+  padding: 1rem;
+  background-color: pink;
+}
+
+.section__about-pictures {
+  grid-column: 2/3; /* Pictures in the second column */
+  grid-row: 2/3;
+  padding: 1rem;
+  background-color: green;
+}
+
+.section__about-content {
+  grid-column: 3/4; /* Content in the third column */
+  grid-row: 2/3;
+  padding: 1rem;
+  background-color: teal;
+}
+
+.section__skills {
+  grid-column: 2/4; /* Content section */
+  grid-row: 3/4;
+  padding: 1rem; /* Responsive spacing */
+  background-color: orange;
+}
+
+.section__my-work {
+  grid-column: 2/4; /* Content section */
+  grid-row: 4/5;
+  padding: 1rem; /* Responsive spacing */
+  background-color: blue;
+}
+
+.section__contact {
+  grid-column: 2/4; /* Spans the second and third columns */
+  grid-row: 5/6;
+  padding: 1rem;
+  background-color: aqua;
+}
+
+.section__footer {
+  grid-column: 1/4; /* Footer spans all columns */
+  grid-row: 6/7; /* Bottom of the grid */
+  padding: 1rem;
+  background-color: tan;
+}
+
+/*# sourceMappingURL=style.css.map */

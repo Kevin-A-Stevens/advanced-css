@@ -1,0 +1,5 @@
+.section__nav {
+    grid-column: 1 / 2; /* Sidebar on the left */
+    grid-row: 1 / 7; /* Stretches down to the footer */
+    background-color: red;
+}
