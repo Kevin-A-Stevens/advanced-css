@@ -51,14 +51,146 @@ body {
 .section__nav {
   grid-column: 1/2; /* Sidebar on the left */
   grid-row: 1/7; /* Stretches down to the footer */
-  background-color: red;
+  background-color: #fab95b;
+  padding-top: 10rem;
+}
+
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 10rem;
+}
+
+.side-nav {
+  font-size: 1.4rem;
+  list-style: none;
+}
+
+.side-nav__item {
+  position: relative;
+  padding-left: 0.75rem;
+}
+
+.side-nav__item:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+.side-nav__item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 3px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(209, 213, 219, 0.3);
+  transform: scaleY(0);
+  transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s, background-color 0.1s;
+}
+
+.side-nav__item:hover::before,
+.side-nav__item--active::before {
+  transform: scaleY(1);
+  width: 100%;
+}
+
+.side-nav__item:active::before {
+  background-color: #e8e2db;
+}
+
+.side-nav__link:link,
+.side-nav__link:visited {
+  color: #1a3263;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: block;
+  padding: 1.5rem 0.2rem;
+  position: relative;
+  z-index: 10;
 }
 
 .section__header {
   grid-column: 2/4; /* Spans the second and third columns */
   grid-row: 1/2;
   padding: 1rem;
-  background-color: pink;
+  background-color: #464442;
+  background-image: linear-gradient(rgba(26, 50, 99, 0.93), rgba(26, 50, 99, 0.93)), url(../img/landing-page.jpg);
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+
+.header-main {
+  padding: 10rem 0;
+}
+
+.heading-4 {
+  margin-top: 4rem;
+}
+
+.social__links {
+  display: flex;
+  justify-content: center; /* Centers all items horizontally */
+  gap: 3rem; /* Adds spacing between items */
+  list-style: none;
+  padding-bottom: 5rem;
+}
+
+.social__item {
+  display: flex;
+  flex-direction: column; /* Stacks icon and text vertically */
+  align-items: center; /* Centers items horizontally within each column */
+  gap: 0.5rem; /* Adds spacing between the icon and the text */
+}
+
+.link__icon {
+  width: 6rem; /* Icon size */
+  height: auto; /* Ensures aspect ratio is maintained */
+  fill: #d1cbc5;
+}
+
+.social__link {
+  font-size: 1.4rem; /* Text size */
+  color: #fff;
+  text-decoration: none;
+  font-family: "Rubik", sans-serif;
+  text-transform: uppercase;
+  text-align: center; /* Ensures the text is centered under the icon */
+  margin: 0; /* Removes unnecessary margin */
+  transition: all 0.2s;
+}
+
+.icon__name {
+  margin-left: -5.5rem;
+  color: #d1cbc5;
+}
+
+.text_icon:hover,
+.text_icon:active {
+  transform: translateY(-3px);
+}
+
+.social__link:link,
+.social__link:visited {
+  font-size: 1.4rem;
+  color: #fff;
+  text-decoration: none;
+  font-family: "Rubik", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 1.5rem;
+  display: block;
+  transition: all 0.2s;
+}
+
+.social__link:hover,
+.social__link--active {
+  transform: translateY(-3px);
+}
+
+.link__icon:hover,
+.link__icon:active {
+  filter: brightness(1.5);
 }
 
 .section__about-pictures {
@@ -101,6 +233,69 @@ body {
   grid-row: 6/7; /* Bottom of the grid */
   padding: 1rem;
   background-color: tan;
+}
+
+.heading-4, .heading-3, .heading-2, .heading-1 {
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+}
+
+.heading-1 {
+  font-size: 4.5rem;
+  color: #e8e2db;
+  line-height: 1;
+  letter-spacing: 0.1rem;
+}
+
+.heading-2 {
+  font-size: 4rem;
+  font-size: italic;
+  line-height: 1;
+  letter-spacing: 0.1rem;
+}
+
+.heading-3 {
+  font-size: 1.6rem;
+  color: #d1cbc5;
+  letter-spacing: 0.1rem;
+}
+
+.heading-4 {
+  font-size: 1.9rem;
+  color: #d1cbc5;
+  letter-spacing: 0.1rem;
+}
+
+.btn {
+  background-color: #1a3263;
+  color: #fff;
+  border: none;
+  border-radius: 0;
+  font-family: "Rubik", sans-serif;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  padding: 1.8rem 3rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.btn:hover {
+  background-color: #15284f;
+}
+
+.mb-sm {
+  margin-bottom: 2rem;
+}
+
+.mb-md {
+  margin-bottom: 3rem;
+}
+
+.mb-lg {
+  margin-bottom: 4rem;
+}
+
+.mb-hg {
+  margin-bottom: 6rem;
 }
 
 /*# sourceMappingURL=style.css.map */

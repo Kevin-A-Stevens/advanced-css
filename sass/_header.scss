@@ -2,5 +2,96 @@
     grid-column: 2 / 4; /* Spans the second and third columns */
     grid-row: 1 / 2;
     padding: 1rem;
-    background-color: pink;
+    background-color: $color-gray-dark-1;
+    background-image: linear-gradient(
+      rgba($color-primary, 0.93),
+      rgba($color-primary, 0.93)
+    ),
+    url(../img/landing-page.jpg);
+  background-size: cover;
+  background-position: center;
+
+//   display: grid;
+//   grid-row-gap: 0.5rem;
+  text-align: center;
+}
+
+.header-main {
+    padding: 10rem 0;
+}
+  
+.heading-4 {
+    margin-top: 4rem;
+}
+
+.social__links {
+    display: flex;
+    justify-content: center; /* Centers all items horizontally */
+    gap: 3rem; /* Adds spacing between items */
+    list-style: none;
+    padding-bottom: 5rem;
+}
+
+.social__item {
+    display: flex;
+    flex-direction: column; /* Stacks icon and text vertically */
+    align-items: center; /* Centers items horizontally within each column */
+    gap: 0.5rem; /* Adds spacing between the icon and the text */
+}
+
+.link__icon {
+    width: 6rem; /* Icon size */
+    height: auto; /* Ensures aspect ratio is maintained */
+    fill: $color-gray-light-2;
+}
+
+.social__link {
+    font-size: 1.4rem; /* Text size */
+    color: #fff;
+    text-decoration: none;
+    font-family: $font-primary;
+    text-transform: uppercase;
+    text-align: center; /* Ensures the text is centered under the icon */
+    margin: 0; /* Removes unnecessary margin */
+    // display: inline-block;
+    transition: all 0.2s;
+}
+
+.icon__name {
+    margin-left: -5.5rem;
+    color: $color-gray-light-2;
+}
+
+
+// HOVER ANIMATION
+
+.text_icon:hover,
+.text_icon:active {
+//   background-color: rgba(#fff, 0.05);
+  transform: translateY(-3px)
+}
+
+.social__link:link,
+.social__link:visited {
+  font-size: 1.4rem;
+  color: #fff;
+  text-decoration: none;
+  font-family: $font-primary;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 1.5rem;
+  display: block;
+  transition: all 0.2s;
+}
+
+.social__link:hover,
+.social__link--active {
+//   background-color: rgba(#fff, 0.05);
+    // color: $color-gray-light-1;
+    transform: translateY(-3px);
+}
+
+.link__icon:hover,
+.link__icon:active {
+    filter: brightness(1.5);
 }
