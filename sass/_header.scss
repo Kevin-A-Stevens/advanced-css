@@ -24,74 +24,58 @@
     margin-top: 4rem;
 }
 
-.social__links {
-    display: flex;
-    justify-content: center; /* Centers all items horizontally */
-    gap: 3rem; /* Adds spacing between items */
-    list-style: none;
-    padding-bottom: 5rem;
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 3rem;
 }
 
-.social__item {
-    display: flex;
-    flex-direction: column; /* Stacks icon and text vertically */
-    align-items: center; /* Centers items horizontally within each column */
-    gap: 0.5rem; /* Adds spacing between the icon and the text */
-}
-
-.link__icon {
-    width: 6rem; /* Icon size */
-    height: auto; /* Ensures aspect ratio is maintained */
-    fill: $color-gray-light-2;
-}
-
-.social__link {
-    font-size: 1.4rem; /* Text size */
-    color: #fff;
-    text-decoration: none;
-    font-family: $font-primary;
-    text-transform: uppercase;
-    text-align: center; /* Ensures the text is centered under the icon */
-    margin: 0; /* Removes unnecessary margin */
-    // display: inline-block;
-    transition: all 0.2s;
-}
-
-.icon__name {
-    margin-left: -5.5rem;
-    color: $color-gray-light-2;
-}
-
-
-// HOVER ANIMATION
-
-.text_icon:hover,
-.text_icon:active {
-//   background-color: rgba(#fff, 0.05);
-  transform: translateY(-3px)
-}
-
-.social__link:link,
-.social__link:visited {
-  font-size: 1.4rem;
-  color: #fff;
-  text-decoration: none;
+.social-btn {
+  position: relative;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: $color-gray-light-2;
+  font-size: 1.5rem;
   font-family: $font-primary;
   text-transform: uppercase;
   text-align: center;
-  padding: 1.5rem;
-  display: block;
-  transition: all 0.2s;
+  padding: 1rem 2rem;
+  border: 2px solid $color-gray-light-2;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  text-decoration: none;
+  z-index: 1;
 }
 
-.social__link:hover,
-.social__link--active {
-//   background-color: rgba(#fff, 0.05);
-    // color: $color-gray-light-1;
-    transform: translateY(-3px);
+.social-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background-color: rgba($color-primary-dark, 0.3);
+  transition: width 0.4s cubic-bezier(1, 0, 0, 1);
+  z-index: 0;
 }
 
-.link__icon:hover,
-.link__icon:active {
-    filter: brightness(1.5);
+// HOVER ANIMATION
+
+.social-btn:hover::before {
+  width: 100%;
 }
+
+.social-btn:hover {
+  // color: $color-primary-dark; /* Adjust this color so the text remains visible */
+  // color: $color-primary-light;
+  color: #fff;
+  // font-weight: 700;
+}
+
+// .social-btn {
+//   position: relative;
+//   z-index: 2;
+//   mix-blend-mode: difference; /* Ensures contrast against background */
+// }
