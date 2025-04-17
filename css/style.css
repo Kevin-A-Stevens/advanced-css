@@ -228,8 +228,26 @@ body {
 .section__skills {
   grid-column: 2/4; /* Content section */
   grid-row: 3/4;
-  padding: 1rem; /* Responsive spacing */
-  background-color: orange;
+  padding: 2rem;
+  background-color: #1a3263; /* Using your primary color */
+  color: white;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three columns */
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.skill {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 12px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
 }
 
 .section__my-work {
