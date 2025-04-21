@@ -254,7 +254,31 @@ body {
   grid-column: 2/4; /* Content section */
   grid-row: 4/5;
   padding: 1rem; /* Responsive spacing */
-  background-color: blue;
+  background-color: #fab95b;
+  text-align: center;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.project {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.project img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.project:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .section__contact {
